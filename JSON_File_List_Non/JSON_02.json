@@ -1,0 +1,100 @@
+{
+    "resourceType": "AuditEvent",
+    "id": "example",
+    "type": {
+      "system": "http://dicom.nema.org/resources/ontology/DCM",
+      "code": "110100",
+      "display": "Application Activity"
+    },
+    "subtype": [
+      {
+        "system": "http://hl7.org/fhir/ValueSet/audit-event-sub-type",
+        "code": "110120",
+        "display": "Query"
+      }
+    ],
+    "action": "E",
+    "recorded": "2024-06-30T08:42:00Z",
+    "outcome": "0",
+    "agent": [
+      {
+        "type": {
+          "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+          "code": "110153",
+          "display": "Human user"
+        },
+        "role": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+                "code": "AUT",
+                "display": "Authorized User"
+              }
+            ]
+          }
+        ],
+        "who": {
+          "reference": "Practitioner/example",
+          "display": "Dr. Adam Careful"
+        },
+        "requestor": true,
+        "network": {
+          "address": "192.168.1.1",
+          "type": "2"
+        }
+      }
+    ],
+    "source": {
+      "site": "Healthcare IT System",
+      "observer": {
+        "reference": "Organization/1",
+        "display": "Health System"
+      },
+      "type": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/security-source-type",
+          "code": "4",
+          "display": "Application Server"
+        }
+      ]
+    },
+    "entity": [
+      {
+        "what": {
+          "reference": "Patient/example",
+          "display": "Example Patient"
+        },
+        "type": {
+          "system": "http://hl7.org/fhir/resource-types",
+          "code": "Patient"
+        },
+        "role": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/object-role",
+              "code": "1",
+              "display": "Patient"
+            }
+          ]
+        },
+        "lifecycle": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle",
+              "code": "6",
+              "display": "Access"
+            }
+          ]
+        },
+        "securityLabel": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+            "code": "N",
+            "display": "normal"
+          }
+        ]
+      }
+    ]
+  }
+  
